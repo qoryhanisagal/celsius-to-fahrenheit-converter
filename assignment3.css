@@ -3,7 +3,7 @@
    I chose Arial as the font for its clean, modern look. The background color (#f3f4f6) is a light, 
    neutral shade to provide contrast against the container. I used flexbox to center the container 
    both horizontally and vertically, ensuring the content is visually balanced. */
-   body {
+body {
     margin: 0;
     font-family: Arial, sans-serif;
     background-color: #f3f4f6;
@@ -13,31 +13,33 @@
     display: flex; /* Flexbox helps align the container easily. */
     justify-content: center; /* Centers the container horizontally. */
     align-items: center; /* Centers the container vertically. */
+    height: 100vh;
 }
 
 /* ====== Container for Styling ====== */
 /* I created this container to hold all the content. I used a white background to make 
-   it stand out against the light gray body background. Rounded corners (10px) and a subtle shadow 
-   (box-shadow) were added to give the container a modern, professional look. I increased the padding 
+it stand out against the light gray body background. Rounded corners (15px) and a subtle shadow 
+(box-shadow) were added to give the container a modern, professional look. I increased the padding 
    for better spacing and set a max-width to ensure the container stays readable on larger screens. */
 .container {
     background-color: #ffffff;
-    border-radius: 10px;
-    padding: 40px; /* Increased padding for a spacious feel. */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Stronger shadow for emphasis. */
-    width: 80%; /* Makes the container responsive on smaller screens. */
-    max-width: 800px; /* Prevents the container from becoming too wide on large screens. */
+    border-radius: 15px;
+    padding: 50px; /* Increased padding for a spacious feel. */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Stronger shadow for emphasis. */
+    width: 90%; /* Makes the container responsive on smaller screens. */
+    max-width: 600px; /* Prevents the container from becoming too wide on large screens. */
     text-align: center;
 }
 
 /* ====== Weather Image Row ======  */
 /* I used flexbox again to align the weather images in a horizontal row. Adding 
-   'justify-content: space-between' ensures even spacing between the images for a clean layout. 
+'justify-content: space-between' ensures even spacing between the images for a clean layout. 
    The margin at the bottom creates separation from the rest of the content. */
 .image-row {
     display: flex;
     justify-content: space-between; /* Distributes the images evenly across the row. */
     margin-bottom: 20px; /* Adds spacing below the images. */
+    align-items: center;
 }
 
 /* ======  Weather Icons ======  */
@@ -57,23 +59,88 @@ h1 {
     margin-bottom: 20px;
 }
 
-/* ======  Button Style ======  */
-/* The button is styled with a green background (#28a745) to indicate a call-to-action. 
-   I used a larger font size and padding to make it easier to click, especially on mobile devices. 
-   The hover effect provides feedback to the user when interacting with the button. */
+/* ====== Input Field ====== */
+/* Modern styling for the temperature input field */
+#temperature {
+    padding: 10px; /* Comfortable spacing inside the field */
+    font-size: 16px; /* Easy-to-read text */
+    border: 1px solid #ccc; /* Light gray border for a clean look */
+    border-radius: 8px; /* Rounded corners for a modern design */
+    outline: none; /* Remove default focus outline */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth focus effect */
+    width: 110px; /* Set a reasonable width */
+    text-align: center; /* Center-align the text for better UX */
+    margin-right: 10px;
+}
+
+#temperature:focus {
+    border-color: #28a745; /* Highlighted green border on focus */
+    box-shadow: 0 0 8px rgba(40, 167, 69, 0.5); /* Subtle glow effect */
+}
+
+/* ====== Dropdown Menu ====== */
+/* Modern styling for the scale dropdown */
+#scale {
+    padding: 10px; /* Consistent padding with input field */
+    font-size: 16px; /* Easy-to-read text */
+    border: 1px solid #ccc; /* Light gray border for consistency */
+    border-radius: 8px; /* Rounded corners for a modern design */
+    outline: none; /* Remove default focus outline */
+    background-color: #ffffff; /* White background for better contrast */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth focus effect */
+    cursor: pointer; /* Change cursor to pointer */
+}
+
+#scale:focus {
+    border-color: #28a745; /* Highlighted green border on focus */
+    box-shadow: 0 0 8px rgba(40, 167, 69, 0.5); /* Subtle glow effect */
+}
+
+/* ====== Dropdown Arrow Styling ====== */
+/* Ensure a modern dropdown arrow */
+#scale::-ms-expand {
+    display: none; /* Hide default arrow in IE/Edge */
+}
+
+#scale {
+    appearance: none; /* Remove default arrow on modern browsers */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="%23333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"%3E%3Cpolyline points="6 9 12 15 18 9"%3E%3C/polyline%3E%3C/svg%3E'); /* Custom arrow icon */
+    background-repeat: no-repeat;
+    background-position: right 10px center; /* Position arrow */
+    background-size: 12px;
+}
+
+/* ====== Input and Dropdown Layout ====== */
+input,
+select {
+    margin-right: 10px; /* Add spacing between input and dropdown */
+}
+
+/* ====== Button Styling (Refined) ====== */
 button {
-    background-color: #28a745; /* Green is a friendly, action-oriented color. */
+    background-color: #28a745; /* Green call-to-action */
     color: white;
-    font-size: 18px; /* Increased size for readability. */
-    padding: 15px 30px; /* Larger button for better usability. */
-    border: none; /* Removes the default border for a clean look. */
-    border-radius: 5px; /* Rounded corners for a modern design. */
+    font-size: 16px; /* Slightly reduced for balance */
+    padding: 12px 20px; /* Adjusted padding for a cleaner look */
+    border: none;
+    border-radius: 8px; /* Rounded corners */
     cursor: pointer;
-    transition: background-color 0.3s ease; /* Smooth hover effect for better UX. */
+    transition: all 0.3s ease;
+    display: inline-block;
+    margin-top: 20px;
+    align-self: center;
 }
 
 button:hover {
-    background-color: #218838; /* Slightly darker green to indicate interaction. */
+    background-color: #218838; /* Darker green on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle hover shadow */
+}
+
+button:active {
+    background-color: #1e7e34; /* Darker green for active state */
+    transform: scale(0.98); /* Slightly smaller button to simulate click */
 }
 
 /* ======  Output Style ======  */
@@ -83,4 +150,29 @@ button:hover {
     font-size: 20px;
     color: #333333;
     margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9; /* Light background for contrast */
+
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+/* ======  Challenge ======  */
+.cold-temperature {
+    color: blue;
+    background-color: #e0f7fa; /* Light blue for cold */
+    border: 1px solid blue;
+}
+
+.warm-temperature {
+    color: orange;
+    background-color: #fff3e0; /* Light orange for warm */
+    border: 1px solid orange;
+}
+
+.hot-temperature {
+    color: red;
+    background-color: #ffebee; /* Light red for hot */
+    border: 1px solid red;
 }

@@ -19,10 +19,21 @@
         </div>
 
         <!-- Page Title -->
-        <h1>Convert Celsius to Fahrenheit</h1>
+        <h1>Temperature Converter</h1>
+
+        <!-- Temperature Input Field -->
+        <label for="temperature">Enter Temperature:</label>
+        <input type="number" id="temperature" placeholder="Enter value" required>
+
+        <!-- Scale Selection (Celsius or Fahrenheit) -->
+        <label for="scale">Select Scale:</label>
+        <select id="scale">
+            <option value="C">Celsius</option>
+            <option value="F">Fahrenheit</option>
+        </select>
 
         <!-- Button to Trigger Conversion -->
-        <button onclick="convertTemperature()">Convert Celsius to Fahrenheit</button>
+        <button onclick="convertTemperature()">Convert</button>
 
         <!-- Output Area -->
         <p id="output"></p>
