@@ -1,7 +1,7 @@
 /* ====== Global Styling ====== */
 /* I reset the body to remove default margins and paddings to have better control over the layout. 
-   I chose Arial as the font for its clean, modern look. The background color (#f3f4f6) is a light, 
-   neutral shade to provide contrast against the container. I used flexbox to center the container 
+I chose Arial as the font for its clean, modern look. The background color (#f3f4f6) is a light, 
+neutral shade to provide contrast against the container. I used flexbox to center the container 
    both horizontally and vertically, ensuring the content is visually balanced. */
 body {
     margin: 0;
@@ -158,7 +158,7 @@ button:active {
     transition: color 0.3s ease, background-color 0.3s ease;
 }
 
-/* ======  Challenge ======  */
+/* ======  Challenge Attempted ======  */
 .cold-temperature {
     color: blue;
     background-color: #e0f7fa; /* Light blue for cold */
