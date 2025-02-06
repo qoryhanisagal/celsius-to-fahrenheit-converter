@@ -3,23 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Koireee Celsius to Fahrenheit Converter</title>
+    <title>Koiree Celsius to Fahrenheit Converter</title>
+    <!-- Link to CSS file -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Celsius to Fahrenheit Converter</h1>
-    <p>Enter a temperature in Celsius and convert it to Fahrenheit.</p>
+    <div class="container">
+        <!-- Weather Images -->
+        <div class="image-row">
+            <img src="img/hot.png" alt="Hot" class="weather-icon">
+            <img src="img/sun.png" alt="Sunny" class="weather-icon">
+            <img src="img/cloudy.png" alt="Cloudy" class="weather-icon">
+            <img src="img/rainy.png" alt="Rainy" class="weather-icon">
+            <img src="img/cold.png" alt="Cold" class="weather-icon">
+        </div>
 
-    <!-- Input field for the user to enter temperature -->
-    <label for="celsiusInput">Celsius:</label>
-    <input type="number" id="celsiusInput" placeholder="Enter Celsius">
+        <!-- Page Title -->
+        <h1>Convert Celsius to Fahrenheit</h1>
 
-    <!-- Button to trigger the conversion -->
-    <button onclick="convertTemperature()">Convert</button>
+        <!-- Button to Trigger Conversion -->
+        <button onclick="convertTemperature()">Convert Celsius to Fahrenheit</button>
 
-    <!-- Output area where the result will be displayed -->
-    <p id="output"></p>
+        <!-- Output Area -->
+        <p id="output"></p>
+    </div>
 
-    <!-- Link to the JavaScript file -->
+    <!-- Link to JavaScript file -->
     <script src="assignment2.js"></script>
 </body>
 </html>
