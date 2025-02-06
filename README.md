@@ -52,7 +52,7 @@ The project directory is organized as follows:
 2. **Conversion Logic:**
    - The conversion formula applied is:
    ```
-     (celsius * 9/5) + 32;
+    Fahrenheit =  (celsius * 9/5) + 32;
      ```
 
 3. **Output Display:**
