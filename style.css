@@ -1,0 +1,66 @@
+/* General Reset */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f3f4f6;
+    text-align: center;
+    padding: 0; /* Remove padding */
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+}
+
+/* Container for Styling */
+.container {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 40px; /* Increased padding */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Stronger shadow */
+    width: 80%; /* Wider container */
+    max-width: 800px; /* Limit maximum width */
+    text-align: center;
+}
+
+/* Weather Image Row */
+.image-row {
+    display: flex; /* Align items horizontally */
+    justify-content: space-between; /* Add even spacing between images */
+    margin-bottom: 20px;
+}
+
+/* Weather Icons */
+.weather-icon {
+    width: 100px; /* Larger icons */
+    height: auto;
+}
+
+/* Heading Style */
+h1 {
+    color: #333333;
+    font-size: 32px; /* Larger heading */
+    margin-bottom: 20px;
+}
+
+/* Button Style */
+button {
+    background-color: #28a745;
+    color: white;
+    font-size: 18px; /* Larger button text */
+    padding: 15px 30px; /* Larger button size */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+/* Output Style */
+#output {
+    font-size: 20px; /* Larger font for output */
+    color: #333333;
+    margin-top: 20px;
+}
