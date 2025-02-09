@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Koiree Celsius to Fahrenheit Converter</title>
     <!-- Link to CSS file -->
-    <link rel="stylesheet" href="assignment3.css">
+    <link rel="stylesheet" href="finalreport.css">
 </head>
 <body>
     <div class="container">
@@ -21,25 +21,17 @@
         <!-- Page Title -->
         <h1>Temperature Converter</h1>
 
-        <!-- Temperature Input Field -->
-        <label for="temperature">Enter Temperature:</label>
-        <input type="number" id="temperature" placeholder="Enter value" required>
-
-        <!-- Scale Selection (Celsius or Fahrenheit) -->
-        <label for="scale">Select Scale:</label>
-        <select id="scale">
-            <option value="C">Celsius</option>
-            <option value="F">Fahrenheit</option>
-        </select>
-
         <!-- Button to Trigger Conversion -->
-        <button onclick="convertTemperature()">Convert</button>
+        <button onclick="getUserTemperatureRange()">Convert Temperature Range</button>
 
-        <!-- Output Area -->
-        <p id="output"></p>
+        <!-- Output Area for the List of Converted Temperatures -->
+        <div id="output-container">
+            <div id="output"></div> <!-- For indivdual temperature outputs -->
+        </div>
+        
     </div>
 
     <!-- Link to JavaScript file -->
-    <script src="assignment3.js"></script>
+    <script src="finalreport.js"></script>
 </body>
 </html>

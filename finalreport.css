@@ -123,7 +123,7 @@ button {
     background-color: #28a745; /* Green call-to-action */
     color: white;
     font-size: 16px; /* Slightly reduced for balance */
-    padding: 12px 20px; /* Adjusted padding for a cleaner look */
+    padding: 12px 20px; /* I adjusted padding for a cleaner look */
     border: none;
     border-radius: 8px; /* Rounded corners */
     cursor: pointer;
@@ -143,36 +143,79 @@ button:active {
     transform: scale(0.98); /* Slightly smaller button to simulate click */
 }
 
-/* ======  Output Style ======  */
-/* I increased the font size (20px) for better readability and used the same text color 
-   (#333333) to keep the design consistent with the heading. */
-#output {
-    font-size: 20px;
-    color: #333333;
-    margin-top: 20px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #f9f9f9; /* Light background for contrast */
-
-    transition: color 0.3s ease, background-color 0.3s ease;
+/* ====== Output Container ====== */
+/* I created the #output-container to hold and align all the output elements dynamically.
+   By using flexbox, I ensure the outputs are centered both horizontally and vertically. */
+#output-container {
+    display: flex; /* I use flexbox to manage layout easily. */
+    flex-direction: column; /* I stack the outputs vertically. */
+    justify-content: center; /* This centers the items vertically. */
+    align-items: center; /* This centers the items horizontally. */
+    width: 100%; /* I set the container to take up the full width of the parent. */
+    padding: 10px; /* I add some spacing inside the container for better aesthetics. */
+    margin-top: 20px; /* I separate the container from elements above it. */
 }
 
-/* ======  Challenge Attempted ======  */
+/* ====== Output Styling ====== */
+/* I designed the #output element to display individual temperature results. 
+   I used a subtle shadow and rounded corners for a modern, clean look. */
+#output {
+    width: 100%; /* I allow the width to adjust dynamically based on content. *
+    max-width: 800px; /* Set to ensure it doesn’t stretch too much */
+    font-size: 20px; /* I chose this size to make the text easy to read. */
+    color: #333333; /* I set the default text color to match the heading. */
+    padding: 15px; /* I added padding for better spacing inside the output box. */
+    background-color: #f9f9f9; /* A light background makes the text stand out. */
+    border: 1px solid #ccc; /* I use a subtle border for a clean, defined look. */
+    border-radius: 5px; /* Rounded corners add a softer, modern feel. */
+    text-align: center; /* I center-align the text for better readability. */
+    margin-bottom: 10px; /* I add spacing between multiple outputs. */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* A subtle shadow adds depth. */
+    transition: transform 0.2s ease, box-shadow 0.2s ease, color 0.3s ease, background-color 0.3s ease; /* I use smooth transitions for better interactivity. */
+}
+
+/* ====== Hover Effect ====== */
+/* I added a hover effect to make the output visually engaging when the user interacts with it. */
+#output:hover {
+    transform: scale(1.02); /* Slightly enlarges the output on hover for feedback. */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* The shadow becomes more prominent on hover. */
+}
+
+/* ====== Output List Styling ====== */
+/* I use this list inside #output-container to display multiple temperature results dynamically. */
+#output-container ul {
+    list-style-type: none; /* I remove default bullet points for a cleaner look. */
+    padding: 0; /* I remove default padding to ensure proper alignment. */
+    margin: 0; /* I remove default margins for consistent spacing. */
+}
+
+/* I styled the individual list items to make them visually distinct and easy to read. */
+#output-container li {
+    font-size: 18px; /* I set a slightly smaller size for list items. */
+    margin: 8px 0; /* I added vertical spacing between list items. */
+    padding: 8px; /* I added padding for better spacing inside the items. */
+    border-radius: 5px; /* Rounded edges match the overall design theme. */
+    transition: background-color 0.3s ease; /* Smooth transition for background color changes. */
+}
+
+/* ====== Challenge: Temperature-Based Coloring ====== */
+/* I used these styles to visually differentiate temperatures by range.
+   Each range has a unique text and background color to make the result more intuitive. */
+
 .cold-temperature {
-    color: blue;
-    background-color: #e0f7fa; /* Light blue for cold */
-    border: 1px solid blue;
+    color: blue; /* Blue indicates cold temperatures. */
+    background-color: #e0f7fa; /* A light blue background complements the text color. */
+    border: 1px solid blue; /* I add a border to match the text color. */
 }
 
 .warm-temperature {
-    color: orange;
-    background-color: #fff3e0; /* Light orange for warm */
-    border: 1px solid orange;
+    color: orange; /* Orange indicates warm temperatures. */
+    background-color: #fff3e0; /* A light orange background makes it visually distinct. */
+    border: 1px solid orange; /* The border color matches the text. */
 }
 
 .hot-temperature {
-    color: red;
-    background-color: #ffebee; /* Light red for hot */
-    border: 1px solid red;
+    color: red; /* Red indicates hot temperatures. */
+    background-color: #ffebee; /* A light red background complements the text color. */
+    border: 1px solid red; /* The border color matches the text. */
 }
